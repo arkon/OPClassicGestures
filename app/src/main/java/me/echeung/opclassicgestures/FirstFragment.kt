@@ -1,6 +1,7 @@
 package me.echeung.opclassicgestures
 
 import android.os.Bundle
+import android.provider.Settings
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -27,8 +28,15 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        binding.toggleSwitch.isChecked =
+            Settings.System.getInt(requireContext().contentResolver, SIDE_SETTING_KEY) == 0
+
+        binding.toggleSwitch.setOnCheckedChangeListener { _, checked ->
+            Settings.System.putInt(requireContext().contentResolver, SIDE_SETTING_KEY, if (checked) 0 else 1)
         }
+    }
+
+    private companion object {
+        private const val SIDE_SETTING_KEY = "op_gesture_button_side_enabled"
     }
 }
