@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="me.echeung.opclassicgestures.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first"/>
+        android:name="me.echeung.opclassicgestures.SettingsFragment"
+        android:label="@string/settings_fragment_label"
+        tools:layout="@layout/fragment_settings"/>
 
 </navigation>

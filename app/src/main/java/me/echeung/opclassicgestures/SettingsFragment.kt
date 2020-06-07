@@ -2,26 +2,22 @@ package me.echeung.opclassicgestures
 
 import android.os.Bundle
 import android.provider.Settings
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.fragment.findNavController
-import me.echeung.opclassicgestures.databinding.FragmentFirstBinding
+import androidx.fragment.app.Fragment
+import me.echeung.opclassicgestures.databinding.FragmentSettingsBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
-class FirstFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
-    private lateinit var binding: FragmentFirstBinding
+    private lateinit var binding: FragmentSettingsBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
