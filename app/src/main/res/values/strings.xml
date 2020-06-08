@@ -3,4 +3,11 @@
 
     <string name="settings_fragment_label">Settings</string>
     <string name="classic_gestures">Enable classic gestures</string>
+
+    <string name="permission_required">This app requires permissions to change system settings</string>
+    <string name="permission_granted">Permissions granted!</string>
+
+    <string name="error_fragment_label">Error</string>
+    <string name="msg_must_be_android_10">This app is only compatible with Android 10</string>
+    <string name="msg_setting_not_found">Setting not found</string>
 </resources>

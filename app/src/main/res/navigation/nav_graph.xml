@@ -3,12 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/SettingsFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="me.echeung.opclassicgestures.SettingsFragment"
+        android:id="@+id/SettingsFragment"
+        android:name="me.echeung.opclassicgestures.ui.SettingsFragment"
         android:label="@string/settings_fragment_label"
-        tools:layout="@layout/fragment_settings"/>
+        tools:layout="@layout/fragment_settings">
+
+        <action
+            android:id="@+id/action_SettingsFragment_to_ErrorFragment"
+            app:destination="@id/ErrorFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ErrorFragment"
+        android:name="me.echeung.opclassicgestures.ui.ErrorFragment"
+        android:label="@string/error_fragment_label"
+        tools:layout="@layout/fragment_error"/>
 
 </navigation>
