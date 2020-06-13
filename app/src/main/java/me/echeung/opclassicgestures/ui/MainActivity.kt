@@ -7,6 +7,8 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -57,7 +59,23 @@ class MainActivity : AppCompatActivity() {
         context.startActivityForResult(intent, CODE_WRITE_SETTINGS_PERMISSION)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_about -> {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(GITHUB_REPO)))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
     private companion object {
         private const val CODE_WRITE_SETTINGS_PERMISSION = 101
+        private const val GITHUB_REPO = "https://github.com/arkon/OPClassicGestures"
     }
 }

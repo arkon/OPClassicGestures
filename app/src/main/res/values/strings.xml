@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">OP Classic Gestures</string>
 
+    <string name="action_about">About</string>
+
     <string name="settings_fragment_label">Settings</string>
     <string name="classic_gestures">Enable classic gestures</string>
 
