@@ -7,7 +7,7 @@
     <string name="permission_required">This app requires permissions to change system settings</string>
     <string name="permission_granted">Permissions granted!</string>
 
-    <string name="error_fragment_label">Error</string>
-    <string name="msg_must_be_android_10">This app is only compatible with Android 10</string>
-    <string name="msg_setting_not_found">Setting not found</string>
+    <string name="req_android_10">Android 10</string>
+    <string name="req_oneplus_device">OnePlus device</string>
+    <string name="req_setting_found">Setting found</string>
 </resources>

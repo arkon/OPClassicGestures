@@ -27,11 +27,6 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        if (Build.VERSION.SDK_INT != Build.VERSION_CODES.Q || !isClassicGestureSettingPresent(this)) {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.action_SettingsFragment_to_ErrorFragment)
-            return
-        }
-
         checkSettingsPermission(this)
     }
 
